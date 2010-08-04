@@ -18,6 +18,7 @@
 		F49C66E81209601B00B59544 /* Reservations.plist in Resources */ = {isa = PBXBuildFile; fileRef = F49C66E71209601B00B59544 /* Reservations.plist */; };
 		F49C670F1209675F00B59544 /* ReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49C670D1209675F00B59544 /* ReservationViewController.m */; };
 		F49C674412096AFB00B59544 /* Offers.plist in Resources */ = {isa = PBXBuildFile; fileRef = F49C674312096AFB00B59544 /* Offers.plist */; };
+		F49C676112096CA300B59544 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49C676012096CA300B59544 /* MainWindow-iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F49C670C1209675F00B59544 /* ReservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservationViewController.h; sourceTree = "<group>"; };
 		F49C670D1209675F00B59544 /* ReservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservationViewController.m; sourceTree = "<group>"; };
 		F49C674312096AFB00B59544 /* Offers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Offers.plist; sourceTree = "<group>"; };
+		F49C676012096CA300B59544 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources-iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				F49C675F12096CA200B59544 /* Resources-iPad */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -116,6 +119,14 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F49C675F12096CA200B59544 /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+				F49C676012096CA300B59544 /* MainWindow-iPad.xib */,
+			);
+			name = "Resources-iPad";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
 				F49C66E81209601B00B59544 /* Reservations.plist in Resources */,
 				F49C674412096AFB00B59544 /* Offers.plist in Resources */,
+				F49C676112096CA300B59544 /* MainWindow-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,13 +207,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AppleStoreBath_Prefix.pch;
 				INFOPLIST_FILE = "AppleStoreBath-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PRODUCT_NAME = AppleStoreBath;
+				SDKROOT = iphoneos4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -209,11 +225,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AppleStoreBath_Prefix.pch;
 				INFOPLIST_FILE = "AppleStoreBath-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PRODUCT_NAME = AppleStoreBath;
+				SDKROOT = iphoneos4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
