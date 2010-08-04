@@ -36,6 +36,10 @@
 		[self selectFirst];
 		firstLoad = NO;
 	}
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+		[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+	}
 }
 
 - (void) selectFirst
