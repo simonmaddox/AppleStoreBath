@@ -13,13 +13,69 @@
 
 @synthesize reservation, arrivalDate;
 
-#pragma mark -
-#pragma mark Table view data source
+@synthesize toolbar, mainTable, popoverController;
 
 - (void) viewDidLoad
 {
 	offers = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Offers" ofType:@"plist"]];
 }
+
+- (void) updateReservation:(BOOL) resetChecks
+{
+	if (resetChecks){
+		for (NSInteger i = 0; i < 4; i++){
+			NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:1];
+			
+			UITableViewCell *cell = [self.mainTable cellForRowAtIndexPath:indexPath];
+			
+			if (cell.accessoryType != UITableViewCellAccessoryNone){
+				[self.mainTable selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+				[self tableView:self.mainTable didSelectRowAtIndexPath:indexPath];
+			}
+
+		}
+	}
+	
+	[self.mainTable reloadData];
+	
+	if (popoverController != nil) {
+        [popoverController dismissPopoverAnimated:YES];
+    }
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+		return YES;
+	}
+	
+    return UIInterfaceOrientationPortrait;
+}
+
+#pragma mark iPad
+
+
+- (void)splitViewController: (UISplitViewController*)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController: (UIPopoverController*)pc {
+	barButtonItem.title = @"Reservations";
+    NSMutableArray *items = [[toolbar items] mutableCopy];
+    [items insertObject:barButtonItem atIndex:0];
+    [toolbar setItems:items animated:YES];
+    [items release];
+    self.popoverController = pc;
+}
+
+
+// Called when the view is shown again in the split view, invalidating the button and popover controller.
+- (void)splitViewController: (UISplitViewController*)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
+    
+    NSMutableArray *items = [[toolbar items] mutableCopy];
+    [items removeObjectAtIndex:0];
+    [toolbar setItems:items animated:YES];
+    [items release];
+    self.popoverController = nil;
+}
+
+#pragma mark -
+#pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 4;
@@ -142,6 +198,9 @@
 - (void)viewDidUnload {
 	self.reservation = nil;
 	self.arrivalDate = nil;
+	
+	self.mainTable = nil;
+	self.toolbar = nil;
 	
 	[offers release]; offers = nil;
 }

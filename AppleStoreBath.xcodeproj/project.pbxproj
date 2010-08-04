@@ -19,6 +19,8 @@
 		F49C670F1209675F00B59544 /* ReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49C670D1209675F00B59544 /* ReservationViewController.m */; };
 		F49C674412096AFB00B59544 /* Offers.plist in Resources */ = {isa = PBXBuildFile; fileRef = F49C674312096AFB00B59544 /* Offers.plist */; };
 		F49C676112096CA300B59544 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49C676012096CA300B59544 /* MainWindow-iPad.xib */; };
+		F49C685B12097BC900B59544 /* ReservationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49C685A12097BC900B59544 /* ReservationViewController.xib */; };
+		F49C688D12097D4300B59544 /* ReservationViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49C688C12097D4300B59544 /* ReservationViewController-iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		F49C670D1209675F00B59544 /* ReservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservationViewController.m; sourceTree = "<group>"; };
 		F49C674312096AFB00B59544 /* Offers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Offers.plist; sourceTree = "<group>"; };
 		F49C676012096CA300B59544 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources-iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		F49C685A12097BC900B59544 /* ReservationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationViewController.xib; sourceTree = "<group>"; };
+		F49C688C12097D4300B59544 /* ReservationViewController-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "ReservationViewController-iPad.xib"; path = "Resources-iPad/ReservationViewController-iPad.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 			children = (
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				F49C685A12097BC900B59544 /* ReservationViewController.xib */,
 				8D1107310486CEB800E47090 /* AppleStoreBath-Info.plist */,
 				F49C66E71209601B00B59544 /* Reservations.plist */,
 				F49C674312096AFB00B59544 /* Offers.plist */,
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				F49C676012096CA300B59544 /* MainWindow-iPad.xib */,
+				F49C688C12097D4300B59544 /* ReservationViewController-iPad.xib */,
 			);
 			name = "Resources-iPad";
 			sourceTree = "<group>";
@@ -183,6 +189,8 @@
 				F49C66E81209601B00B59544 /* Reservations.plist in Resources */,
 				F49C674412096AFB00B59544 /* Offers.plist in Resources */,
 				F49C676112096CA300B59544 /* MainWindow-iPad.xib in Resources */,
+				F49C685B12097BC900B59544 /* ReservationViewController.xib in Resources */,
+				F49C688D12097D4300B59544 /* ReservationViewController-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,12 +8,17 @@
 
 #import "AppleStoreBathAppDelegate.h"
 #import "RootViewController.h"
-
+#import "ReservationViewController.h"
 
 @implementation AppleStoreBathAppDelegate
 
 @synthesize window;
+
+#pragma mark iPhone
 @synthesize navigationController;
+
+#pragma mark iPad
+@synthesize splitViewController, rootViewController, reservationViewController;
 
 
 #pragma mark -
@@ -24,7 +29,13 @@
     // Override point for customization after application launch.
     
     // Add the navigation controller's view to the window and display.
-    [window addSubview:navigationController.view];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+		[window addSubview:navigationController.view];
+	} else {
+		[window addSubview:splitViewController.view];
+	}
+	
     [window makeKeyAndVisible];
 
     return YES;
@@ -81,6 +92,7 @@
 
 - (void)dealloc {
 	[navigationController release];
+	[splitViewController release];
 	[window release];
 	[super dealloc];
 }

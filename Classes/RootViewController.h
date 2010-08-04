@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class ReservationViewController;
+
 @interface RootViewController : UITableViewController {
 	NSArray *reservations;
+	
+	ReservationViewController *reservationViewController;
+	
+	BOOL firstLoad;
+	BOOL autoSelect;
 }
+
+@property (nonatomic, retain) IBOutlet ReservationViewController *reservationViewController;
+
+- (void) selectFirst;
 
 @end

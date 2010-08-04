@@ -12,6 +12,7 @@
 
 @implementation RootViewController
 
+@synthesize reservationViewController;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -20,10 +21,40 @@
     [super viewDidLoad];
 	
 	[self setTitle:@"Reservations"];
+	
+	autoSelect = NO;
+	firstLoad = YES;
 
     reservations = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Reservations" ofType:@"plist"]];
+	
+	[self selectFirst];
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+	if (firstLoad){
+		[self selectFirst];
+		firstLoad = NO;
+	}
+}
+
+- (void) selectFirst
+{
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+		autoSelect = YES;
+		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+		[self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+		[self tableView:self.tableView didSelectRowAtIndexPath:indexPath];
+	}
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+		return YES;
+	}
+	
+    return UIInterfaceOrientationPortrait;
+}
 
 #pragma mark -
 #pragma mark Table view data source
@@ -73,12 +104,20 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ReservationViewController *reservationViewController = [[ReservationViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	if (self.reservationViewController == nil){
+		self.reservationViewController = [[ReservationViewController alloc] initWithNibName:@"ReservationViewController" bundle:nil];
+	}
+	
 	[reservationViewController setArrivalDate:[[reservations objectAtIndex:indexPath.section] objectForKey:@"date"]];
 	[reservationViewController setReservation:[[[reservations objectAtIndex:indexPath.section] objectForKey:@"reservations"] objectAtIndex:indexPath.row]];
-	[self.navigationController pushViewController:reservationViewController animated:YES];
-	[reservationViewController release];
+		
+	[reservationViewController updateReservation:!autoSelect];
+		
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+		[self.navigationController pushViewController:reservationViewController animated:YES];
+	}
 	
+	autoSelect = NO;
 }
 
 
@@ -91,6 +130,7 @@
 
 - (void)viewDidUnload {
 	[reservations release]; reservations = nil;
+	self.reservationViewController = nil;
 }
 
 
