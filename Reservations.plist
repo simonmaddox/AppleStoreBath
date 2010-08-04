@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>date</key>
+		<date>2010-08-03T23:00:00Z</date>
+		<key>reservations</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Louis Peters</string>
+				<key>type</key>
+				<string>King</string>
+				<key>departure</key>
+				<date>2010-08-06T08:47:42Z</date>
+				<key>breakfast</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Tanya Palomino</string>
+				<key>type</key>
+				<string>Single</string>
+				<key>departure</key>
+				<date>2010-08-10T08:47:42Z</date>
+				<key>breakfast</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Dora Grenier</string>
+				<key>type</key>
+				<string>Queen</string>
+				<key>departure</key>
+				<date>2010-08-05T08:47:42Z</date>
+				<key>breakfast</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Monique Casey</string>
+				<key>type</key>
+				<string>Suite</string>
+				<key>departure</key>
+				<date>2010-08-08T08:47:42Z</date>
+				<key>breakfast</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Gary Dibble</string>
+				<key>type</key>
+				<string>Double</string>
+				<key>departure</key>
+				<date>2010-08-05T08:47:42Z</date>
+				<key>breakfast</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Kenneth Cotton</string>
+				<key>type</key>
+				<string>King</string>
+				<key>departure</key>
+				<date>2010-08-05T08:47:42Z</date>
+				<key>breakfast</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>date</key>
+		<date>2010-08-04T23:00:00Z</date>
+		<key>reservations</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Terri York</string>
+				<key>type</key>
+				<string>King</string>
+				<key>departure</key>
+				<date>2010-08-06T08:47:42Z</date>
+				<key>breakfast</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Mike Boyette</string>
+				<key>type</key>
+				<string>Single</string>
+				<key>departure</key>
+				<date>2010-08-07T08:47:42Z</date>
+				<key>breakfast</key>
+				<true/>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>date</key>
+		<date>2010-08-05T23:00:00Z</date>
+		<key>reservations</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Christopher Crisp</string>
+				<key>type</key>
+				<string>Suite</string>
+				<key>departure</key>
+				<date>2010-08-21T08:47:42Z</date>
+				<key>breakfast</key>
+				<true/>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>date</key>
+		<date>2010-08-06T23:00:00Z</date>
+		<key>reservations</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Beth Wald</string>
+				<key>type</key>
+				<string>Double</string>
+				<key>departure</key>
+				<date>2010-08-09T08:47:42Z</date>
+				<key>breakfast</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>date</key>
+		<date>2010-08-07T23:00:00Z</date>
+		<key>reservations</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Heather Garman</string>
+				<key>type</key>
+				<string>Queen</string>
+				<key>departure</key>
+				<date>2010-08-14T08:47:42Z</date>
+				<key>breakfast</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>date</key>
+		<date>2010-08-08T23:00:00Z</date>
+		<key>reservations</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Ronald Ridge</string>
+				<key>type</key>
+				<string>Single</string>
+				<key>departure</key>
+				<date>2010-08-10T08:47:42Z</date>
+				<key>breakfast</key>
+				<true/>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

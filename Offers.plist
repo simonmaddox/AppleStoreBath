@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>type</key>
+		<string>Spa</string>
+		<key>offer</key>
+		<string>25% off hotel spa between 2pm and 5pm on weekdays</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>Restaurant</string>
+		<key>offer</key>
+		<string>10% off all food for hotel guests</string>
+	</dict>
+</array>
+</plist>
